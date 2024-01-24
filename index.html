@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itial-scale=1.0">
+        <title>Jeu de dé</title>
+</head>
+<body>
+    <!-- main start -->
+  <main>
+    <!-- player 1 start -->
+    <section class="player player--0 player--active">
+      <h2 class="name name--0">Player 1</h2>
+      <p class="score" id="score--0">0</p>
+      <div class="current">
+        <p class="current-label">Current</p>
+        <p class="current-score" id="current--0">0</p>
+      </div>
+    </section>
+    <section class="player player--1">
+      <h2 class="name name--1">Player 2</h2>
+      <p class="score" id="score--1">0</p>
+      <div class="current">
+        <p class="current-label">Current</p>
+        <p class="current-score" id="current--1">0</p>
+      </div>
+    </section>
+    <section><img src="assets/images/dice/dice-1.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">
+        <img class="icon" src="assets/images/icons/add-circle-outline.svg" alt="New game icon" id="newgame--icon"
+          style="width: 25px;">  New game</button>
+      <button class="btn btn--roll">
+        <img class="icon" src="assets/images/icons/reload.svg" alt="Roll dice icon" id="roll--icon"
+          style="width: 25px;"> Roll dice</button>
+      <button class="btn btn--hold">
+        <img class="icon" src="assets/images/icons/ios-download-outline.svg" alt="Hold score icon" id="save--icon"
+          style="width: 25px;"> Hold</button>
+    </section>
+  </main>
+</body>
+</html>
