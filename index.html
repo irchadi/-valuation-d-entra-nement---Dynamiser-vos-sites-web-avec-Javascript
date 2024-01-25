@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <div class="player" id="player1">
-            <h2>Joueur 1</h2>
-            <p>ROUND: <span class="round-score" id="round-score-1">0</span></p>
-            <p>GLOBAL: <span class="total-score" id="total-score-1">0</span></p>
+    <main>
+        <div id="game-container">
+            <div class="player" id="player1">
+              <h2 class="name">Player 1</h2>
+              <p>ROUND: <span class="round-score" id="round-score-1">0</span></p>
+              <p>GLOBAL: <span class="total-score" id="total-score-1">0</span></p>
+            </div>
+            <div class="player" id="player2">
+             <h2>player 2</h2>
+             <p>ROUND: <span class="round-score" id="round-score-2">0</span></p>
+             <p>GLOBAL: <span class="total-score" id="total-score-2">0</span></p>
+            </div>
+            <div>
+             <button onclick="resetGame()" id="reset-button">Nouvelle Partie</button>
+             <img id="dice" src="assets/dice/dice-1.png" alt="Dé">
+             <button onclick="playerAction('roll')">Lancer le dé</button>
+             <button onclick="playerAction('hold')">Hold</button>
+            </div>
         </div>
-        <div class="player" id="player2">
-            <h2>Joueur 2</h2>
-            <p>ROUND: <span class="round-score" id="round-score-2">0</span></p>
-            <p>GLOBAL: <span class="total-score" id="total-score-2">0</span></p>
-        </div>
-        <button onclick="resetGame()" id="reset-button">Nouvelle Partie</button>
-        <img id="dice" src="assets/dice/dice-1.png" alt="Dé">
-        <button onclick="playerAction('roll')">Lancer le dé</button>
-        <button onclick="playerAction('hold')">Hold</button>
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
