@@ -17,6 +17,11 @@ body {
 
 /* LAYOUT */
 
+
+#game-container {
+    display: flex;
+}
+
 .player {
     flex: 50%;
     padding: 9rem;
@@ -25,3 +30,45 @@ body {
     align-items: center;
     transition: all 0.75s;
   }
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#reset-button {
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Animation */
+/* Animation */
+@keyframes winnerAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.winner {
+    animation: winnerAnimation 1s infinite;
+}
+
+#dice {
+    transition: transform 0.5s ease-in-out;
+}
