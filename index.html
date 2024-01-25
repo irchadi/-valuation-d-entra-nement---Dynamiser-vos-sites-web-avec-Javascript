@@ -1,56 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr-EN">
-<html lang="en-US">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeu de dé</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Dés à 2 Joueurs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- main start -->
-  <main>
-    <!-- player 1 start -->
-    <section class="player player--0 player--active">
-      <h2 class="name name--0">Player 1</h2>
-      <p class="score" id="score--0">0</p>
-      <div class="current">
-        <p class="current-label">Current</p>
-        <p class="current-score" id="current--0">0</p>
-      </div>
-    </section>
-    <section class="player player--1">
-      <h2 class="name name--1">Player 2</h2>
-      <p class="score" id="score--1">0</p>
-      <div class="current">
-        <p class="current-label">Current</p>
-        <p class="current-score" id="current--1">0</p>
-      </div>
-    </section>
-    <section><img src="assets/images/dice/dice-1.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new">
-        <img class="icon" src="assets/images/icons/add-circle-outline.svg" alt="New game icon" id="newgame--icon"
-          style="width: 25px;">  New game</button>
-      <button class="btn btn--roll">
-        <img class="icon" src="assets/images/icons/reload.svg" alt="Roll dice icon" id="roll--icon"
-          style="width: 25px;"> Roll dice</button>
-      <button class="btn btn--hold">
-        <img class="icon" src="assets/images/icons/ios-download-outline.svg" alt="Hold score icon" id="save--icon"
-          style="width: 25px;"> Hold</button>
-    </section>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-</body>
+    <div id="game-container">
+        <div class="player" id="player1">
+            <h2>Joueur 1</h2>
+            <p>ROUND: <span class="round-score" id="round-score-1">0</span></p>
+            <p>GLOBAL: <span class="total-score" id="total-score-1">0</span></p>
+        </div>
+        <div class="player" id="player2">
+            <h2>Joueur 2</h2>
+            <p>ROUND: <span class="round-score" id="round-score-2">0</span></p>
+            <p>GLOBAL: <span class="total-score" id="total-score-2">0</span></p>
+        </div>
+        <button onclick="resetGame()" id="reset-button">Nouvelle Partie</button>
+        <img id="dice" src="assets/dice/dice-1.png" alt="Dé">
+        <button onclick="playerAction('roll')">Lancer le dé</button>
+        <button onclick="playerAction('hold')">Hold</button>
+    </div>
 
+    <script src="script.js"></script>
+</body>
 </html>
