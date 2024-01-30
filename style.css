@@ -5,48 +5,67 @@ html {
 
 /* BODY */
 body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    height: 100vh;
-    color: #333;
+    font-family: "Lato", sans-serif;
+    background-color: #eee;
     border: 10px solid #a4733e;
-    display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-/* LAYOUT */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-
-#game-container {
-    display: flex;
-}
-
-.player {
-    flex: 50%;
-    padding: 9rem;
+.player,
+.player-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.75s;
-  }
+}
+ h2 {
+    padding-top: 50px;
+ }
+
+
+p {
+    padding-bottom: 45px;
+}
+/*
+**************
+* Icons
+**************
+*/
+
+.icon {
+    width: 30px;
+    position: relative;
+    top: 5px;
+    padding-right: 8px;
+}
+
+.active {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ombre légère */
+}
 
 button {
-    padding: 10px;
-    font-size: 1em;
-    margin-top: 10px;
-    cursor: pointer;
+    border-color: transparent;
+    background-color: #eee;
+}
+  
+.button:hover {
+    color: burlywood;
+    font-size: larger;
+    transition-property: font-size;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
 }
 
 #reset-button {
-    padding: 10px;
-    font-size: 1em;
+    padding-bottom: 100px;
     margin-top: 20px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
 }
 
 .dot {
@@ -57,7 +76,41 @@ button {
     display: inline-block;
 }
 
-/* Animation */
+#dice {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* PLAYER */
+
+.player {
+    font-weight: 300;
+    font-size: large;
+    letter-spacing: 1px;
+}
+
+/* Score*/
+.total-score {
+    font-weight: 200;
+    font-size: 50px;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.round-score  {
+    font-size: 20px;
+    background-color: red;
+    width: 100px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+
 /* Animation */
 @keyframes winnerAnimation {
     0% { transform: scale(1); }
@@ -65,10 +118,22 @@ button {
     100% { transform: scale(1); }
 }
 
-.winner {
+.winner h2 {
     animation: winnerAnimation 1s infinite;
 }
 
-#dice {
-    transition: transform 0.5s ease-in-out;
+/* Déclenchement de l'animation lors du changement de l'image du dé */
+
+
+/* Animation de lancement du dé */
+.rolling {
+    animation: rollDiceAnimation 0.5s;
+}
+
+@keyframes rollDiceAnimation {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(180deg); }
+    50% { transform: rotate(360deg); }
+    75% { transform: rotate(540deg); }
+    100% { transform: rotate(720deg); }
 }

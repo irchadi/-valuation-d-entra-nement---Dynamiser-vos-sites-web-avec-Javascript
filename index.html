@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu de Dés à 2 Joueurs</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <div id="game-container">
+        <div class="wrapper">
             <div class="player" id="player1">
-              <h2>Player 1<span class="dot" id="dot1"></span></h2>
-              <p>ROUND: <span class="round-score" id="round-score-1">0</span></p>
-              <p>GLOBAL: <span class="total-score" id="total-score-1">0</span></p>
+                <h2>PLAYER 1<span class="dot" id="dot1"></span></h2>
+                <p style="color: rgb(176, 58, 58);"><span class="total-score" id="total-score-1">0</span></p>
+                <p class="round-score">CURRENT  <span id="round-score-1"><br>0</span></p>
+            </div>
+            <div class="player-buttons">
+                <button onclick="resetGame()" id="reset-button"><img class="icon" src="assets\dice\icons\add-circle-outline.svg" style="width: 15px;">NEW GAME</button>
+                <img id="dice" src="assets/dice/dice-1.png" alt="Dé">
+                <button onclick="playerAction('roll')"><img class="icon" src="assets\dice\icons\reload.svg" style="width: 15px;">  ROLL DICE</button>
+                <button onclick="playerAction('hold')"><img class="icon" src="assets\dice\icons\ios-download-outline.svg" style="width: 15px;">  HOLD</button>
             </div>
             <div class="player" id="player2">
-             <h2>player 2<span class="dot" id="dot2"></span></h2>
-             <p>ROUND: <span class="round-score" id="round-score-2">0</span></p>
-             <p>GLOBAL: <span class="total-score" id="total-score-2">0</span></p>
-            </div>
-            <div>
-             <button onclick="resetGame()" id="reset-button">Nouvelle Partie</button>
-             <img id="dice" src="assets/dice/dice-1.png" alt="Dé">
-             <button onclick="playerAction('roll')">Lancer le dé</button>
-             <button onclick="playerAction('hold')">Hold</button>
+             <h2>PLAYER 2<span class="dot" id="dot2"></span></h2>
+             <p style="color: rgb(176, 58, 58);"><span class="total-score" id="total-score-2">0</span></p>
+             <p class="round-score">CURRENT  <span id="round-score-2"><br>0</span></p>
             </div>
         </div>
     </main>
