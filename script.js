@@ -60,8 +60,8 @@ function switchPlayer() {
     currentPlayer = (currentPlayer === 1) ? 2 : 1;
 
     // Mettez à jour l'affichage pour indiquer le joueur actif
-    document.getElementById(`dot1`).style.display = (currentPlayer === 1) ? 'inline-block' : 'none';
-    document.getElementById(`dot2`).style.display = (currentPlayer === 2) ? 'inline-block' : 'none';
+    document.getElementById('dot1').style.display = (currentPlayer === 1) ? 'inline-block' : 'none';
+    document.getElementById('dot2').style.display = (currentPlayer === 2) ? 'inline-block' : 'none';
 }
 
 function resetGame() {
@@ -81,10 +81,6 @@ function resetGame() {
     // Retirer la classe "winner" des deux joueurs
     document.getElementById(`player1`).classList.remove('winner');
     document.getElementById(`player2`).classList.remove('winner');
-
-    // Réinitialiser les noms des joueurs
-    document.getElementById(`player1`).getElementsByTagName('h2')[0].textContent = 'Joueur 1';
-    document.getElementById(`player2`).getElementsByTagName('h2')[0].textContent = 'Joueur 2';
 
     // Remettre en place le point rouge pour le premier joueur
     document.getElementById(`dot1`).style.display = 'inline-block';

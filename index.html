@@ -12,9 +12,9 @@
     <main>
         <div class="wrapper">
             <div class="player" id="player1">
-                <h2>PLAYER 1<span class="dot" id="dot1"></span></h2>
+                <h2>PLAYER 1 <span class="dot" id="dot1"></span></h2>
                 <p style="color: rgb(176, 58, 58);"><span class="total-score" id="total-score-1">0</span></p>
-                <p class="round-score">CURRENT  <span id="round-score-1"><br>0</span></p>
+                <p class="round-score">CURRENT<br><span id="round-score-1" class="lowered-number">0</span></p>
             </div>
             <div class="player-buttons">
                 <button onclick="resetGame()" id="reset-button"><img class="icon" src="assets\dice\icons\add-circle-outline.svg" style="width: 15px;">NEW GAME</button>
@@ -23,9 +23,9 @@
                 <button onclick="playerAction('hold')"><img class="icon" src="assets\dice\icons\ios-download-outline.svg" style="width: 15px;">  HOLD</button>
             </div>
             <div class="player" id="player2">
-             <h2>PLAYER 2<span class="dot" id="dot2"></span></h2>
+             <h2>PLAYER 2 <span class="dot" id="dot2"></span></h2>
              <p style="color: rgb(176, 58, 58);"><span class="total-score" id="total-score-2">0</span></p>
-             <p class="round-score">CURRENT  <span id="round-score-2"><br>0</span></p>
+             <p class="round-score">CURRENT<br><span id="round-score-2" class="lowered-number">0</span></p>
             </div>
         </div>
     </main>
