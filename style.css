@@ -1,3 +1,4 @@
+/* Réinitialisation */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -11,68 +12,54 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
+/* Conteneurs */
 .player,
 .player-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 376px; /* Ajustez la hauteur maximale selon vos besoins */
 }
- h2 {
+
+/* En-têtes */
+h2 {
     padding-top: 50px;
- }
+}
 
-
+/* Paragraphes */
 p {
     padding-bottom: 45px;
 }
 
-#round-score-1 {
-    margin-top: 20px;
-}
-
-/*
-**************
-* Icons
-**************
-*/
-
-.icon {
-    width: 30px;
-    position: relative;
-    top: 5px;
-    padding-right: 8px;
-}
-
+/* Boutons */
 .active {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ombre légère */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 button {
     border-color: transparent;
     background-color: #eee;
 }
-  
+
 .button:hover {
     color: burlywood;
     font-size: larger;
-    transition-property: font-size;
-    transition-duration: 0.3s;
-    transition-delay: 0s;
-    transition-timing-function: ease;
+    transition: font-size 0.3s ease; /* Utilisation raccourcie de transition */
 }
 
 #reset-button {
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     margin-top: 20px;
 }
 
+/* Points rouges */
 .dot {
     width: 10px;
     height: 10px;
@@ -86,8 +73,7 @@ button {
     display: inline-block;
 }
 
-
-
+/* Image du dé */
 #dice {
     max-width: 80px;
     height: auto;
@@ -97,38 +83,31 @@ button {
     transition: transform 0.5s ease-in-out;
 }
 
-/* PLAYER */
-
+/* Joueurs */
 .player {
     font-weight: 300;
     font-size: large;
     letter-spacing: 1px;
 }
 
-/* Score*/
+/* Scores */
 .total-score {
     font-weight: 200;
     font-size: 50px;
-    margin: 0;
-    padding-bottom: 30px;
 }
 
 .round-score  {
     font-size: 15px;
     background-color: red;
-    border: 20px;
-    width: 100px;
-    height: 40px; /* Ajustez cette valeur selon votre préférence pour réduire la hauteur */
-    margin-top: 60px;
-    margin-bottom: 100px;
     text-align: center;
+    padding-bottom: 7px;
 }
 
 .lowered-number {
     font-size: xx-large;
     color: white;
     position: relative;
-    top: 10px; 
+    top: 3px;
 }
 
 /* Animation */
@@ -142,10 +121,7 @@ button {
     animation: winnerAnimation 1s infinite;
 }
 
-/* Déclenchement de l'animation lors du changement de l'image du dé */
-
-
-/* Animation de lancement du dé */
+/* Animation du dé */
 .rolling {
     animation: rollDiceAnimation 0.5s;
 }
@@ -156,41 +132,4 @@ button {
     50% { transform: rotate(360deg); }
     75% { transform: rotate(540deg); }
     100% { transform: rotate(720deg); }
-}
-
-/* Responsive */
-
-/* Styles pour les écrans de taille moyenne à grande */
-@media screen and (min-width: 768px) {
-    .wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .player {
-        width: 30%;
-    }
-}
-
-/* Styles pour les très petits écrans (comme les smartphones en mode portrait) */
-@media screen and (max-width: 320px) {
-    .wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .player {
-        width: 10%;
-        font-size: small;
-
-    }
-    
-    .player-buttons {
-        width: 95px;
-    }
-
-    .round-score {
-        width: 75px;
-    }
 }
