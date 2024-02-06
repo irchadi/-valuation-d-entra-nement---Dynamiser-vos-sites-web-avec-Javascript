@@ -1,3 +1,5 @@
+https://rolldicedom.netlify.app
+
 *Règles du jeu
 
 Le jeu comprend 2 joueurs sur un seul et même écran.
