@@ -1,4 +1,4 @@
-[![Netlify Status](https://https://rolldicedom.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e3aba679-2e91-4c91-8281-62d613f05647/deploy-status)](https://app.netlify.com/sites/rolldicedom/deploys)
 
 **Règles du jeu
 
