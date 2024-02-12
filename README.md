@@ -19,7 +19,7 @@ Le premier joueur qui atteint les 100 points sur global gagne le jeu.
  - JavaScript
  - framework Bootstrap
  - google Fonts
- -Netlify pour la mise en ligne.
+ - Netlify pour la mise en ligne.
 
 
 -----------------------------------------
