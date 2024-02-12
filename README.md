@@ -1,4 +1,6 @@
-*Règles du jeu
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e3aba679-2e91-4c91-8281-62d613f05647/deploy-status)](https://app.netlify.com/sites/rolldicedom/deploys)
+
+**Règles du jeu
 
 Le jeu comprend 2 joueurs sur un seul et même écran.
 Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).
@@ -11,5 +13,13 @@ tour de l’autre joueur.
 Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 
 ------------------------------------------------------------------
+**Moyens Utilisés
+ - html 5
+ - CSS 3
+ - JavaScript
+ - framework Bootstrap
+ - google Fonts
+ -Netlify pour la mise en ligne.
+
 
 -----------------------------------------
