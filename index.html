@@ -20,10 +20,16 @@
             </div>
             <div class="player-buttons col-2">
                 <!-- Boutons de contrôle du jeu -->
-                <button onclick="resetGame()" id="reset-button" class="btn btn-transparent"><img class="icon" src="assets\dice\icons\add-circle-outline.svg" style="width: 15px;">NEW GAME</button>
+                <button onclick="resetGame()" id="reset-button" class="btn btn-transparent">
+                    <img class="icon" src="assets\dice\icons\add-circle-outline.svg" style="width: 15px;">NEW GAME
+                </button>
                 <img id="dice" src="assets/dice/dice-1.png" alt="Dé">
-                <button onclick="playerAction('roll')" class="btn btn-transparent"><img class="icon" src="assets\dice\icons\reload.svg" style="width: 15px;">  ROLL DICE</button>
-                <button onclick="playerAction('hold')" class="btn btn-transparent"><img class="icon" src="assets\dice\icons\ios-download-outline.svg" style="width: 15px;">  HOLD</button>
+                <button onclick="playerAction('roll')" class="btn btn-transparent">
+                    <img class="icon" src="assets\dice\icons\reload.svg" style="width: 15px;">  ROLL DICE
+                </button>
+                <button onclick="playerAction('hold')" class="btn btn-transparent">
+                    <img class="icon" src="assets\dice\icons\ios-download-outline.svg" style="width: 15px;">  HOLD
+                </button>
             </div>
             <div class="player col-5 justify-content-between" id="player2">
                 <!-- Contenu du deuxième joueur -->
@@ -34,7 +40,6 @@
         </div>
     </main>
     
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
